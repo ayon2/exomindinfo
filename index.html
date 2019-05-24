@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+  <link rel='stylesheet' href="loginpage.css">
+  <title> Login Page </title>
+</head>
+<header>
+  <img src='./images/biglogoclear.png' alt='logo' width=60%>
+</header>
+<body>
+  <h1>Informational Website <br>
+  Login Page</h1>
+  <form name='login'>
+  <p>Username</p>
+  <input class='ltext' type='text' placeholder='Enter Username' name='uname' required><br>
+  <p>Password</p>
+  <input class='ltext' type='text' placeholder='Enter Password' name='pword' required><br>
+  <input class='button' type="button" onclick="check(this.form)" value="Login"/>
+  </form>
+  <script language="javascript">
+  function check(form)/*function to check userid & password*/
+  {
+   /*the following code checkes whether the entered userid and password are matching*/
+   if(form.uname.value == "admin" && form.pword.value == "password")
+    {
+      window.open('homepage.html')/*opens the target page while Id & password matches*/
+    }
+   else
+   {
+     alert("Error Incorrect Password or Username")/*displays error message*/
+    }
+  }
+  </script>
+</body>

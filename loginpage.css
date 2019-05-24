@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+h1 {
+  color:#3884ba;
+  font-size:60px;
+  -webkit-text-stroke: 0.3px black;
+  font-family:Inconsolata, sans-serif;
+  text-align:center;
+  font-weight:bold;
+}
+body {
+  width:auto;
+  background-color:#cdebfe;
+  height:850px;
+}
+img {
+  padding-top:3%;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+p {
+  display:inline-block;
+  padding-right:7px;
+  font-family:righteous;
+  margin-bottom:2px;
+  font-size:20px;
+  padding-left:30%;
+}
+.button {
+  background-color:#023554;
+  border:none;
+  color:white;
+  padding: 14px 20px;
+  width:30%;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  margin-top:30px;
+  cursor:pointer;
+}
+.button:hover {
+  opacity:0.8;
+}
+.ltext {
+  width:40%;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+}

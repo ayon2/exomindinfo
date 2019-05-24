@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Set a background color */
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #023554;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgba(255,255,255,0.5);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: rgba(255,255,255,0.5);
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+h1 {
+  background-color:#023554;
+  text-align:center;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+  width:50%;
+  margin-left:25%;
+  margin-right:25%;
+  padding:10px 10px;
+  color:white;
+  font-size:26px;
+}
+</style>
+<html>
+  <head>
+    <title>Timeline</title>
+    <link rel='stylesheet' href='mainstyles.css'>
+  </head>
+<body>
+  <header>
+    <div id='container'>
+      <img src='./images/biglogob.png' alt='logo' id='img'>
+      <div id='banner'>Timeline of Ai</div>
+    </div>
+    <nav>
+      <div id='container'>
+        <div class="dropdown">
+          <i class='fas fa-compass'></i>
+          <button class="dropbtn">Navigation</button>
+          <div class="dropdown-content">
+            <a href="homepage.html">Homepage</a>
+            <a href="whatisai.html">What is AI?</a>
+            <a href="timeline.html">Timeline of AI</a>
+            <a href="future.html">The Future of AI</a>
+            <a href="sources.html">Sources</a>
+          </div>
+        </div>
+        <p>| </p>
+        <i class='fas fa-door-open'></i>
+        <a href='loginpage.html'>Logout</a>
+        <div class='ding'><h5>Find out more by searching for yourself!</h5>
+        <form action='https://www.google.com/search' method='get'>
+          <input type='text' name='q' placeholder='Google Search'>
+          <input type='submit' value='Search' class='gb'>
+        </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <h1>Timeline from 2000-Current <br>
+    (Plus extra important event for Ai)</h1>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h2>2018</h2>
+        <p>Alibaba language processing AI outscores top humans at a Stanford University reading and comprehension test, scoring 82.44 against 82.304 on a set of 100,000 questions.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2017</h2>
+        <p>An OpenAI-machined learned bot played at The International 2017 Dota 2 tournament in August 2017. It won during a 1v1 demonstration game against professional Dota 2 player Dendi.</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2016</h2>
+        <p>Google DeepMind's AlphaGo (version: Lee) defeated Lee Sedol 4–1. Lee Sedol is a 9 dan professional Korean Go champion who won 27 major tournaments from 2002 to 2016. Before the match with AlphaGo, Lee Sedol was confident in predicting an easy 5–0 or 4–1 victory</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2015</h2>
+        <p>An open letter to ban development and use of autonomous weapons signed by Hawking, Musk, Wozniak and 3,000 researchers in AI and robotics.</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2011</h2>
+        <p>IBM's Watson computer defeated television game show Jeopardy! champions Rutter and Jennings.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2007</h2>
+        <p>DARPA launches an urban challenge for autonomous cars to operate in urban environments safely</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2005</h2>
+        <p>Recommendation technology is developed by advertising companies to use web activity and media usage to an Ai which then chooses what fits best for the chosen consumer.
+        </p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2005</h2>
+        <p>ASIMO, a robot designed and produced by the Honda Motor Company is able to walk at the same speed as a person, and is used to deliver trays to customers in a restaurant setting.</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>2002</h2>
+        <p>iRobot develops the Roomba which autonomously vacuums the floor while navigating and avoiding obstacles.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>2000</h2>
+        <p>Cynthia Breazeal at MIT publishes her dissertation on Sociable machines, describing Kismet, a robot with a face that expresses emotions.</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>1950 (Extra event)</h2>
+        <p>One of the most important moments for the development of Ai, Isaac Asimov publishes his Three Laws of Robotics, thus creating the first set of guidelines for Ai, as well as much debate on the ethics of robotics.</p>
+      </div>
+    </div>
+  </div>
+</body>
+<footer>
+  <p>
+    ExoMind Ai Solution Co. 434 Appletree Road, Sydney, 2198<br>
+    Contact us: (Main) 0265 938 0394, (Support) 7568 498 637, (Support Email) thundrbolt@gmail.com<br>
+    ©2019 Exomind Ai Solution Co. All rights reserved.
+  </p>
+</footer>
+</html>

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+/*This is only for the navbar+banner*/
+* {
+  margin:0;
+  padding:0;
+}
+body {
+  width:auto;
+  padding: 0;
+  margin: 0;
+}
+#container {
+  width:100%;
+  border:2px solid #023554;
+  background-color:#023554;
+}
+#container > #img {
+  margin-left:-4px;
+  width:14%;
+  display:inline-block;
+  float:left;
+}
+#container > #banner {
+  font-family: Righteous, sans-serif;
+  text-align: right;
+  background-image:url('circuitboard.jpg');
+  color:white;
+  font-size:45px;
+  padding:2px 15% 2px 10%;
+  margin-right:4px;
+  -webkit-text-stroke: 1px black;
+  display:inline-block;
+  vertical-align:top;
+  width:60%;
+  position:relative;
+}
+nav > #container > p {
+  display:inline-block;
+  padding:18px 2% 16px 2%;
+  margin-left:-4px;
+  background-color:#023554;
+  color:white;
+  margin-right:-1px;
+}
+nav > #container > a {
+  background-color:#023554;
+  display:inline-block;
+  margin-left:-3px;
+  padding:16px 20px 16px 20px;
+  text-decoration:none;
+  color:white;
+  font-family:Righteous,sans-serif;
+}
+/* class for the search bar*/
+.ding {
+  margin-right:15px;
+  margin-bottom:10px;
+  float:right;
+  font-family:righteous,sans-serif;
+}
+/* search button */
+.gb {
+  float:right;
+  border:2px solid #0d7dc1;
+  background-color:#055a8e;
+  color:white;
+  font-family:righteous,sans-serif;
+  width:100px;
+}
+/* text above search*/
+h5 {
+  color:white;
+  font-family:righteous, sans-serif;
+  font-size:15px;
+  margin-bottom:5px;
+}
+.fa-compass {
+  color:white;
+  font-size:18px;
+  margin:2px -4px 2px 8px;
+}
+.fa-door-open {
+  color:white;
+  font-size:18px;
+  margin:2px -2px 2px -2px;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color:#023554;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  font-family:Righteous, sans-serif;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #055a8e;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor:pointer;
+  font-family:righteous,sans-serif;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #023554;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #023554;}
